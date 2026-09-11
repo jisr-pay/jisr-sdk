@@ -1,8 +1,20 @@
 export const TESTNET_PASSPHRASE = 'Test SDF Network ; September 2015';
 export const TESTNET_XLM_TOKEN = 'CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC';
 
+/** Validated network endpoints and addresses every SDK operation must receive. */
+export interface NetworkConfig {
+  contractId: string;
+  treasuryAddress: string;
+  tokenAddress: string;
+  federationUrl: string;
+  rpcUrl: string;
+  horizonUrl: string;
+  networkPassphrase: string;
+  network: 'TESTNET';
+}
+
 /** The journal, wallet signing and receipts all describe Testnet XLM. */
-export function resolveNetworkConfig(env: Record<string, string | undefined>) {
+export function resolveNetworkConfig(env: Record<string, string | undefined>): NetworkConfig {
   const setting = (key: string, fallback: string) => env[key]?.trim() || fallback;
   const passphrase = setting('VITE_NETWORK_PASSPHRASE', TESTNET_PASSPHRASE);
   if (passphrase !== TESTNET_PASSPHRASE) throw new Error('Jisr Pay currently supports Stellar Testnet only.');
