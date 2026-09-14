@@ -1,5 +1,3 @@
-<p align="center"><img src="https://raw.githubusercontent.com/jisr-pay/.github/main/assets/icon.svg" alt="Jisr" width="72"></p>
-
 # @workspace/jisr-sdk
 
 Reusable Stellar payment primitives for Jisr Pay: exact decimal amounts,
