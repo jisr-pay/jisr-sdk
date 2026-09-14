@@ -10,7 +10,6 @@ import {
   Address,
   BASE_FEE,
   Contract,
-  Networks,
   rpc,
   TransactionBuilder,
   nativeToScVal,
@@ -18,7 +17,7 @@ import {
 import { AppError, classifyError } from './errors.ts';
 import { createLogger } from './logger.ts';
 import { parseAmountToStroops } from './amount.ts';
-import { resolveNetworkConfig, type NetworkConfig } from './network-config.ts';
+import { type NetworkConfig } from './network-config.ts';
 
 const log = createLogger('payment');
 
@@ -78,8 +77,10 @@ export async function buildAndSubmitPayment(
   recipientKey: string,
   amountXLM: string,
   callbacks: PaymentCallbacks,
+  /** Optional Soroban RPC override — lets callers (tests, alternative transports) supply the server instead of reaching into the prototype. */
+  options: { rpcServer?: rpc.Server } = {},
 ): Promise<TransactionResult> {
-  const server = new rpc.Server(network.rpcUrl);
+  const server = options.rpcServer ?? new rpc.Server(network.rpcUrl);
 
   // Validate the amount before anything network-related.
   const stroops = parseAmountToStroops(amountXLM);
