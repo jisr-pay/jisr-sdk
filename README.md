@@ -47,3 +47,14 @@ pnpm --filter @workspace/jisr-sdk test
 ```
 
 Tests run with `node --experimental-strip-types --test` — no browser, no DOM.
+
+## October 9 submission preparation
+
+See the [scoped engineering backlog](docs/WAVE_BACKLOG.md). The organization
+[maintainer record](https://github.com/jisr-pay/.github/blob/main/MAINTAINERS.md)
+tracks ownership and remaining confirmations.
+
+## Stellar Wave submission preparation
+
+See the [submission brief](docs/SUBMISSION.md), [verification record](docs/VERIFICATION_OCT09.md),
+[maintainers](MAINTAINERS.md), and [focused contributor backlog](docs/WAVE_BACKLOG.md).
