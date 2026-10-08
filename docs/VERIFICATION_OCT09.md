@@ -32,3 +32,7 @@ Runtime: Node 22.23.2, TypeScript 5.9.3 and pnpm 11.8.0.
 - Changes will be proposed through a fork PR because the available account
   cannot push directly to the organization's protected branch. Merge decisions
   remain with maintainers. Recheck the final PR checks before applying.
+
+## October 8 recheck
+
+Node 22.23.2: 49 tests and TypeScript build passed again. Preparation PR #10 remained open at this observation.
