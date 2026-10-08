@@ -12,7 +12,7 @@ Node 22.13+; `pnpm install --frozen-lockfile`, `pnpm test`, `pnpm run typecheck`
 
 ## Evidence and supported scope
 
-Standalone source matches the web workspace copy. Existing handoff records 49 SDK tests and installed API consumer verification. Testnet only; contract submission helpers are implemented, but original router source/deployment provenance remains unavailable. Transaction success does not itself verify payment details.
+Standalone source matches the web workspace copy. The 0.4.0 integration adds router invocation/event verification, verified submission, safe recovery and wallet/RPC hash checks. A fresh payment through the compiled SDK was verified against exact recipient/treasury balances; see ROUTER_INTEGRATION.md. Testnet only; default deployment is a disposable-key demonstration. Transaction success does not itself verify payment details.
 
 Evidence reference: [https://github.com/jisr-pay/jisr-api/blob/main/SDK_REVIEW.md](https://github.com/jisr-pay/jisr-api/blob/main/SDK_REVIEW.md).
 Baseline source revision: `4a21043ec238a11adbc9c99f858e438fbc4fad9e`. Final reviewed preparation revision and CI
