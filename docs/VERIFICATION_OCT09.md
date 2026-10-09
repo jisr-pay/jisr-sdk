@@ -26,7 +26,7 @@ Runtime: Node 22.23.2, TypeScript 5.9.3 and pnpm 11.8.0.
 - Six engineering issues were published with bounded acceptance criteria and
   proposed complexity; links are in WAVE_BACKLOG.md. No Wave labels/enrollment
   or contributor assignments were performed.
-- Maintainers xteesamz and EthTobi were owner-confirmed; GitHub contact and
+- Maintainer EthTobi were owner-confirmed; GitHub contact and
   anytime availability apply. GitHub App coverage/application slots still
   require dashboard confirmation.
 - Changes will be proposed through a fork PR because the available account
